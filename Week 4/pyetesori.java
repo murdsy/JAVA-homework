@@ -10,9 +10,10 @@ Ne fund duhet te afishohet numri i pikeve te sakta.
 import javax.swing.JOptionPane;
 class pyetesori{
     public static void main(String[] arg){
+        
         String p1, p2, p3, p4, p5;
         float piket = 0;
-        
+
         p1 = JOptionPane.showInputDialog(null, "A ndryshon gjate ekzekutimit te programit nje konstante? Po/Jo");
         p2 = JOptionPane.showInputDialog(null, "A mund te perdoret tipi boolean per te ruajtur vlerat true dhe false? Po/Jo");
         p3 = JOptionPane.showInputDialog(null, "A mund te perdoret metoda showMessageDialog() per te lexuar nga tastiera? Po/Jo" );

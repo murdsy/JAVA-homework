@@ -4,5 +4,7 @@
     Ruani programin si NumeroNgaCfaredo.java
  */
 public class numri50 {
-    
+    public static void main(String[] arg){
+        
+    }
 }
