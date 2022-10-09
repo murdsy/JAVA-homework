@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 import java.util.Scanner;
 
 public class rroganet {
+   public static void main(String[] arg){
+        
     int rrogabruto;
     float perqindjaInteresit;
     float rroganet;
@@ -16,11 +18,13 @@ public class rroganet {
     rrogabruto = lol.nextInt();
     System.out.println("Vendosni perqindjen e interesit: ");
     perqindjaInteresit = lol.nextFloat();
-    
+    lol.nextLine();
     lol.close();
 
     rroganet = (1-(perqindjaInteresit/100))*rrogabruto;
 
     JOptionPane.showMessageDialog(null, "Rroga juaj neto eshte: "+rroganet );
-
+   
+    } 
+    
 }
