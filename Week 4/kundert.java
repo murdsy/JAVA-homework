@@ -4,6 +4,10 @@
  */
 public class kundert {
     public static void main(String[] arg){
-        
+        String nr = new String("123456");
+        int i=0;
+        for(i=nr.length()-1; i>=0; i--){
+            System.out.print(nr.charAt(i));
+        }
     }
 }
