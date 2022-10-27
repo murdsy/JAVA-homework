@@ -1,5 +1,9 @@
 
 class detyreklase {
+    public static void main(String[] args){
+        Emri("Martina");
+        Adresa("Tirane, Shqiperi");
+    }
     public static void Emri(String emri){
         System.out.println("Emri juaj eshte: "+ emri);
     }
@@ -8,7 +12,5 @@ class detyreklase {
         System.out.println("Adresa juaj eshte: "+ adresa);
     }
 
-    public static void main(String[] args){
 
-    }
 }
