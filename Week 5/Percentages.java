@@ -11,5 +11,14 @@ b. Modify the Percentages class to accept the values of the two doubles from a u
 at the keyboard. Save the file as Percentages2.java.
  */
 public class Percentages {
+    public static void main(String[] args){
+        double first = 2.0;
+        double second = 5.0;
     
+        computePercent(first, second);
+    }
+
+    public static void computePercent(double one, double two){
+        System.out.println(one + " is " + (one/two)*100 + " percent of "+two);
+    }
 }
