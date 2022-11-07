@@ -33,4 +33,12 @@ public class Student{
         System.out.println("Student No of Points: "+NoOfPoints);
         System.out.println("Student Grade Average: "+gradeAvg);
     }
+
+    public static int setIDNumber(){ int IDnumber=9999; return IDnumber;}
+    public static int setNoOfCredit(){int NoOfCredit=3; return NoOfCredit;}
+    public static int setNoOfPoints(){int NoOfPoints=12; return NoOfPoints;}
+    public static double setGPA(double gradeAvg, int NoOfCredit, int NoOfPoints){
+        gradeAvg = calcultateGradeAvg(NoOfCredit, NoOfPoints);
+        return gradeAvg;
+    }
 }
