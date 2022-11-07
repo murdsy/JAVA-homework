@@ -8,10 +8,6 @@ compute the grade point average field by dividing points by credit hours earned.
 Write methods to display the values in each Student field. Save this class as
 Student.java (d)
 
-b.  Write a class named ShowStudent that instantiates a Student object from the
-class you created and assign values to its fields. Compute the Student grade point
-average, and then display all the values associated with the Student. Save the
-application as ShowStudent.java
 
 c. Create a constructor for the Student class you created. The constructor should
 initialize each Student’s ID number to 9999, his or her points earned to 12, and
@@ -27,7 +23,7 @@ public class Student{
     double gradeAvg;
 
     public static double calcultateGradeAvg(int NoOfCredit, int NoOfPoints){
-        double gradeAvg = NoOfCredit/NoOfPoints;
+        double gradeAvg = NoOfPoints/NoOfCredit;
         return gradeAvg;
     }
 
