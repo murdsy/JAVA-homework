@@ -1,9 +1,17 @@
 /*LAB WORK - WEEK 8
 WRITE A JAVA PROGRAM THAT SIMULATES GRAPHS WITH GUI
 LINEAR AND EXPONENTIALS */
-import java.util.Scanner;
 
-public class graphfunction{
+import java.util.Scanner;
+import javax.swing.JPanel;
+import java.util.ArrayList;
+import javax.swing.SwingUtilities;
+
+public class graphfunction extends JPanel{
+    public static void createAndShowGui(){
+        
+    }
+
     public static int GraphLinear(int k, int c, int x){
         int y = x*k+c;
         return y;
@@ -16,19 +24,21 @@ public class graphfunction{
 
     public static void GraphPointCreator(int choice, int c1, int c2, int c3, int minx, int maxx){
         int y;
-        for(int i = minx; i<maxx; i++){
-            switch(choice){
-                case 1:
-                    y = GraphLinear(c1, c2, i);
-                    break;
-                case 2:
-                    y = GraphParabola(c1, c2, c3, i);
-                    break;
+        if(choice == 1){
+            y = GraphLinear(c1, c2, minx);
+            y = GraphLinear(c1, c2, minx);
+        }
+        else{
+            for(int i = minx; i<maxx; i++){
+                y = GraphParabola(c1, c2, c3, i);
             }
         }
     }
 
     public static void main(String[] args){
+
+        
+
         Scanner in = new Scanner(System.in);
 
         int choice;
