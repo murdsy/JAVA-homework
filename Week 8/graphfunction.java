@@ -1,19 +1,22 @@
 /*LAB WORK - WEEK 8
-WRITE A JAVA PROGRAM THAT SIMULATES GRAPHS WITH GUI
+WRITE A JAVA PROGRAM THAT SIMULATES GRAPHS2 WITH GUI
 LINEAR AND EXPONENTIALS */
 
 import java.util.Scanner;
-
-
 public class graphfunction{
 
     public static void setCanvas(double minx, double maxx){
         //StdDraw StdDraw;
         StdDraw.setCanvasSize(500, 500);
         StdDraw.clear(StdDraw.BLUE);
-        StdDraw.setPenColor(170,0,0);
         StdDraw.setXscale(minx, maxx);
         StdDraw.setYscale(-7*(maxx),7*(maxx));
+        //vizatojme boshtin
+        StdDraw.setPenColor(0,0,0);
+        StdDraw.line(minx,0, maxx, 0); //bosht x
+        StdDraw.line(0, (-7*maxx),0, (7*maxx)); // bosht y
+        StdDraw.setPenColor(170,0,0);
+
     }
 
     public static double GraphLinear(double k, double c, int x){
@@ -72,7 +75,6 @@ public class graphfunction{
                 
             }
 
-            setCanvas((minx*1.0), (maxx*1.0));
 
 
             switch(choice){
@@ -82,6 +84,7 @@ public class graphfunction{
                     m = in.nextInt();
                     System.out.print("c: ");
                     c = in.nextInt();
+                    setCanvas((minx*1.0), (maxx*1.0));
                     GraphPointCreator(choice, m, c, 0, minx, maxx);
                     break;
                 case 2:
@@ -92,7 +95,7 @@ public class graphfunction{
                     b = in.nextInt();
                     System.out.print("c: ");
                     c = in.nextInt();
-
+                    setCanvas((minx*1.0), (maxx*1.0));
                     GraphPointCreator(choice, a, b, c, minx, maxx);
                     break;
             }
