@@ -3,51 +3,59 @@ WRITE A JAVA PROGRAM THAT SIMULATES GRAPHS WITH GUI
 LINEAR AND EXPONENTIALS */
 
 import java.util.Scanner;
-import javax.swing.JPanel;
-import java.util.ArrayList;
-import javax.swing.SwingUtilities;
 
-public class graphfunction extends JPanel{
-    public static void createAndShowGui(){
-        
+
+public class graphfunction{
+
+    public static void setCanvas(double minx, double maxx){
+        //StdDraw StdDraw;
+        StdDraw.setCanvasSize(500, 500);
+        StdDraw.clear(StdDraw.BLUE);
+        StdDraw.setPenColor(170,0,0);
+        StdDraw.setXscale(minx, maxx);
+        StdDraw.setYscale(-7*(maxx),7*(maxx));
     }
 
-    public static int GraphLinear(int k, int c, int x){
-        int y = x*k+c;
+    public static double GraphLinear(double k, double c, int x){
+        double y = x*k+c;
         return y;
     }
 
-    public static int GraphParabola(int a, int b, int c, int x){
-        int y = (x*x*a)+(x*b)+c;
+    public static double GraphParabola(double a, double b, double c, int x){
+        double y = (x*x*a)+(x*b)+c;
         return y;
     }
 
-    public static void GraphPointCreator(int choice, int c1, int c2, int c3, int minx, int maxx){
-        int y;
+    public static void GraphPointCreator(int choice, double c1, double c2, double c3, int minx, int maxx){
+        double y;
         if(choice == 1){
+            double y1;
             y = GraphLinear(c1, c2, minx);
-            y = GraphLinear(c1, c2, minx);
+            y1 = GraphLinear(c1, c2, maxx);
+            StdDraw.line((minx*1.0), y, (maxx*1.0), y1);
         }
         else{
             for(int i = minx; i<maxx; i++){
+                double y1;
                 y = GraphParabola(c1, c2, c3, i);
+                y1 = GraphParabola(c1, c2, c3, i+1);
+
+                StdDraw.line((i*1.0), y, ((i+1)*1.0), y1);
             }
         }
     }
 
     public static void main(String[] args){
 
-        
-
         Scanner in = new Scanner(System.in);
 
         int choice;
         int minx;
         int maxx;
-        int c;
-        int m;
-        int a;
-        int b;
+        double c;
+        double m;
+        double a;
+        double b;
 
         System.out.println("Mireseerdhet ne simulimin e grafikave ne JAVA\n Zgjidhni llojin e grafikut qe do simuloni: \n1 - Linear\n2-Parabole\n3-Ikni nga programi");
         choice = in.nextInt();
@@ -63,6 +71,9 @@ public class graphfunction extends JPanel{
                 System.out.println("error min<maxx");
                 
             }
+
+            setCanvas((minx*1.0), (maxx*1.0));
+
 
             switch(choice){
                 case 1:
@@ -90,6 +101,8 @@ public class graphfunction extends JPanel{
             choice = in.nextInt();
 
         }
+
+        in.close();
 
     }
 }
