@@ -1,7 +1,7 @@
 /*
  * Create a class named Lease with fields that hold an apartment tenant’s name,
 apartment number, monthly rent amount, and term of the lease in months. Include
-a constructor that initializes the name to “XXX”, the apartment number to 0, the
+a constructor that initializes the name to XXx, the apartment number to 0, the
 rent to 1000, and the term to 12. Also include methods to get and set each of the
 fields. Include a nonstatic method named addPetFee() that adds $10 to the
 monthly rent value and calls a static method named explainPetPolicy() that
@@ -18,6 +18,20 @@ public class Lease {
         aptNr = 0;
         monthlyRent = 1000;
         TermOfLease = 12;
+    }
+
+    public void setData(String nt, int an, int mr, int tol){
+        setAptNr(an);
+        setTenantName(nt);
+        setRent(mr);
+        setTOL(tol);
+    }
+
+    public void showValues(){
+        System.out.println("Tenant: "+getTenantName()+"n");
+        System.out.println("Apartament N: "+getAptNr()+"n");
+        System.out.println("Monthly rent: "+getMonthlyRent()+"n");
+        System.out.println("Term of lease: "+getTermOfLease()+"n");
     }
 
     //get methods
