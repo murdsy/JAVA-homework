@@ -38,4 +38,30 @@ public class Lease {
     }
 
     //set methods
+    public void setTenantName(String newTenant){
+        this.tenantName = newTenant;
+    }
+    
+    public void setAptNr(int newapt){
+        this.aptNr = newapt;
+    }
+
+    public void setRent(int newRent){
+        this.monthlyRent = newRent;
+    }
+
+    public void setTOL(int newtol){
+        this.TermOfLease = newtol;
+    }
+
+    //other mothods
+    public void petPolicy(){
+        System.out.print("pet policy is that u have to pay 10 dollars on rent extra.");
+    }
+
+    public void addPetFee(){
+        monthlyRent = monthlyRent+10;
+        petPolicy();
+    }
+
 }
