@@ -6,9 +6,10 @@ import java.util.Scanner;
 public class graphfunction{
 
     public static void setCanvas(double minx, double maxx){
-        //StdDraw StdDraw;
+        //StdDraw StdDraw;2
+        
         StdDraw.setCanvasSize(500, 500);
-        StdDraw.clear(StdDraw.BLUE);
+        StdDraw.clear(StdDraw.WHITE);
         StdDraw.setXscale(minx, maxx);
         StdDraw.setYscale(-7*(maxx),7*(maxx));
         //vizatojme boshtin
@@ -40,8 +41,8 @@ public class graphfunction{
         else{
             for(int i = minx; i<maxx; i++){
                 double y1;
-                y = GraphParabola(c1, c2, c3, i);
-                y1 = GraphParabola(c1, c2, c3, i+1);
+                y = GraphParabola(c1, -c2, c3, i); //gabim - kompnenti b merr te kunderten, u rregullua me -
+                y1 = GraphParabola(c1, -c2, c3, i+1);
 
                 StdDraw.line((i*1.0), y, ((i+1)*1.0), y1);
             }
