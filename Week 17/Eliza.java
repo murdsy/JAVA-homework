@@ -60,6 +60,8 @@ public class Eliza{
         }
 
         
+        //closing arg
+        in.close();
 
     }
 }
