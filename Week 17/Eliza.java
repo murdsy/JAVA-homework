@@ -32,7 +32,8 @@ frazë të rastit nga sa vijon: "Ju lutemi vazhdoni", "Më tregoni më
 shumë" ose "Vazhdoni". Ruani skedarin si Eliza.java.
 */
 
-
+import java.util.Arrays;
+import java.util.regex.Pattern;
 import java.util.Scanner;
 public class Eliza{
     public static void main(String[] arg){
@@ -46,12 +47,16 @@ public class Eliza{
 
         Scanner in = new Scanner(System.in);        
         System.out.println("Mireseerdhet tek ELIZA. Thoni 'Mirupafshim' per te mbyllur biseden.");
-        System.out.println(">>> Pershendetje! Si mundem t'ju ndihmoj! :D");
+        System.out.println(">>> Pershendetje, une jam ELIZA! Si mundem t'ju ndihmoj?");
         //getting continuous input
         System.out.print(">>> ");
         String thisinput = in.nextLine();
+        String[] fjalet;
+        Pattern pattern = Pattern.compile(" ");
         while (thisinput.equalsIgnoreCase("Mirupafshim") != true){
             //compare user input.
+            fjalet = pattern.split(thisinput);
+            
 
             
 
@@ -59,7 +64,7 @@ public class Eliza{
             thisinput = in.nextLine();
         }
 
-        
+
         //closing arg
         in.close();
 
