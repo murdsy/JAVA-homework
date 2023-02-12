@@ -11,7 +11,7 @@ public class tenJLabels {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
 
-        frame.setSize(420,420); //x,y
+        frame.setSize(650,650); //x,y
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
@@ -20,14 +20,17 @@ public class tenJLabels {
         
         
         for(int i=1; i<=10; i++){
-            text.setText("Text Number "+i);
+            
             Font f1 = new Font(Font.DIALOG_INPUT, Font.PLAIN, 10+i);
             text.setFont(f1);
-            //text.setHorizontalAlignment(JLabel.CENTER);
-            //text.setVerticalAlignment(JLabel.CENTER);
-            frame.add(text);
+            text.setText("Text Number "+i+"\n");
+            panel.add(text); 
+            frame.add(panel);
+            //text.setBounds(10, 10+i, 300, 20-i);
+            //panel.add(text);
         }
 
+        frame.add(panel);
         
 
     }
