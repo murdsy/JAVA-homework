@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class DKlase1 extends JFrame implements ItemListener{
+public class DKlase1 extends JFrame implements ActionListener{
 
     JFrame f = new JFrame("JCombo box");
     JLabel puna1 = new JLabel("Zgjidhni punen: ");
@@ -17,10 +17,10 @@ public class DKlase1 extends JFrame implements ItemListener{
 
     public DKlase1(){
         f.setLayout(new FlowLayout());
-        puna.addItemListener(this);
-        parttime.addItemListener(this);
-        fullTime.addItemListener(this);
-        apply.addItemListener(this);
+        puna.addActionListener(this);
+        parttime.addActionListener(this);
+        fullTime.addActionListener(this);
+        apply.addActionListener(this);
         add(puna1);
         add(puna);
         add(koha1);
@@ -29,7 +29,8 @@ public class DKlase1 extends JFrame implements ItemListener{
         add(apply);
         add(result);
     }
-    public void itemStateChanged(ItemEvent e)
+    @Override
+    public void actionPerformend(ActionEvent e)
     {
         Object source = e.getSource();
 
